@@ -1,0 +1,245 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #363875;
+    background-color: #f5ebdf;
+}
+
+.dark-text-color{
+    color: #363875;
+}
+
+.primary-bg-color{
+    background-color: #f5ebdf;
+}
+
+.second-bg-color{
+    background-color: #FFF7F4;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #363875;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+header{
+    background-image: url('../img/header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 349px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-text {
+  animation: fadeUp 2s ease forwards;
+}
+
+.section-title-text {
+    font-weight: bolder;
+}
+
+.profile-img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #363875;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.separator{
+  border: #363875 1px solid;
+  box-shadow:
+    inset 0 0 10px rgb(54, 56, 117),
+    inset 0 0 15px rgb(54, 56, 117),
+    inset 0 0 20px rgb(54, 56, 117);
+}
+
+.timeline-item {
+  border-left: 3px solid rgb(54, 56, 117);
+  padding-left: 15px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(54, 56, 117);
+  border-radius: 50%;
+}
+
+.reference-txt{
+  color: #c89a7b;
+}
+
+.logo-image {
+  max-width: 250px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(54, 56, 117);
+  background-color: floralwhite;
+}
+
+.education-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .education-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timeline-card {
+  background-color: #FFF7F4;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.timeline-item {
+  padding-bottom: 16px;
+  margin-bottom: 0;
+  border-bottom: 1px solid transparent; /* Evita saltos visuales */
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.education-skills .skill-card {
+  background-color: #ede3d7;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #363875;
+}
+
+.education-skills h4 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #f5ebdf;
+  padding-bottom: 6px;
+}
+
+.education-skills ul {
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+.education-skills li {
+  margin-bottom: 6px;
+  list-style-type: disc;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.training-card {
+  background-color: #FFF7F4; /* color 2 */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #363875;
+}
+
+.training-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+.training-card h3 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+  color: #363875;
+}
+
+.training-card h5 {
+  margin-bottom: 8px;
+  color: #363875;
+  font-size: 1rem;
+}
+
+.training-card small {
+  color: #363875;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.training-card small::before {
+  content: "📅";
+  display: inline-block;
+}
+
+footer {
+  background-color: #363875;
+  color: #FFF7F4;
+  text-align: center;
+}
+
+.btn-send
+{
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #363875;
+  --bs-btn-border-color: #363875;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #585bb9;
+  --bs-btn-hover-border-color: #585bb9;
+  --bs-btn-focus-shadow-rgb: 225, 83, 97;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #6e72e9;
+  --bs-btn-active-border-color: #6e72e9;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
